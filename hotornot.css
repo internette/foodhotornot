@@ -1,0 +1,135 @@
+/* CSS declarations go here */
+html,body{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+header{
+	position:absolute;
+	z-index:1000;
+	background: black;
+	color: white;
+	width: 100%;
+	padding: 5px;
+}
+header h1{
+	display: inline-block;
+	position: relative;
+	float: left;
+	font-size: 20px;
+}
+header p{
+	display: inline-block;
+	position: relative;
+	float: left;
+	color: gray;
+	padding-left: 10px;
+}
+article{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	background: black;
+}
+.image-cont{
+	width: 100%;
+	padding-bottom: 100%;
+	display: block;
+	position: relative;
+}
+.images{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+#leftfood, #rightfood{
+	display: block;
+	width: 50%;
+	position: absolute;
+	height: 100%;
+	opacity: 0.5;
+}
+#leftfood:hover, #rightfood:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+#leftfood{
+	left:0;
+}
+#leftfood a, #rightfood a{
+	position: absolute;
+	background: black;
+	color: white;
+	bottom: 0;
+	width: 98%;
+	padding: 1%;
+	text-decoration: none;
+}
+#rightfood{
+	right:0;
+}
+#leaderboards-link{
+	position: relative;
+	float: right;
+}
+h1 a, #leaderboards-link a{
+	color: white;
+	text-decoration: none;
+}
+h1 a{
+	margin-left: 15px;
+}
+#leaderboards-link a{
+	margin-right: 15px;
+}
+h1 a:hover, #leaderboards-link a:hover{
+	text-decoration: underline;
+}
+#leaderboard{
+	background: white;
+	margin-top: 60px;
+	padding: 10px;
+	width:100%;
+	border: 0;
+}
+#leaderboard img{
+	border: 1px solid black;
+	width: 75px;
+	height: 75px;
+}
+#leaderboard ul{
+	list-style-type: none;
+	font-size: 20px;
+	margin: 0;
+	padding:0;
+	width: 100%;
+}
+#leaderboard tr td{
+	vertical-align: middle;
+}
+#leaderboard tr td.likes-counter,#leaderboard tr td.report{
+	text-align: center;
+	width: 20%;
+}
+#leaderboard tr td.report a{
+	color: gray;
+	text-decoration: none;
+}
+#leaderboard tr:nth-child(even) td.report a{
+	color: #343434;
+}
+#leaderboard tr td.report a:hover{
+	text-decoration: underline;
+}
+#leaderboard tr:nth-child(even){
+	background: gainsboro;
+}
+#leaderboard .thumb{
+	width: 60%;
+}
+#leaderboard .thumb a{
+	display: block;
+	height: 80px;
+	width: 100%;
+}

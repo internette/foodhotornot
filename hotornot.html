@@ -1,0 +1,45 @@
+<head>
+  <title>My Food is Better</title>
+</head>
+<template name="layout">
+	<header>
+		<h1><a href="/">My Food is Better</a></h1>
+		<p>Can <i>your</i> food stand the heat?</p>
+		<p id="leaderboards-link"><a href="/leaderboards">View Leaderboards</a></p>
+	</header>
+	<article>
+		{{>yield}}
+	</article>
+
+</template>
+<template name="home">
+	<div id="leftfood">
+	<div class="image-cont">
+		{{>leftimg}}
+	</div>
+	<a href="{{leftfoodurl}}">View on Instagram</a>
+	</div>
+	<div id="rightfood">
+	<div class="image-cont">
+		{{>rightimg}}
+	</div>
+		<a href="{{rightfoodurl}}">View on Instagram</a>
+	</div>
+	<!-- <form id="foodinput">
+		<input name="nameofentry"/>
+		<input type="submit" value="submit"/>
+	</form> -->
+</template>
+<template name="rightimg">
+	<a class="images" id="rightimg" style="background-image: url('{{rightfoodimg}}'); background-size: cover;"></a>
+</template>
+<template name="leftimg">
+	<a class="images" id="leftimg" style="background-image: url('{{leftfoodimg}}'); background-size: cover;"></a>
+</template>
+<template name="leaderboards">
+	<table id="leaderboard">
+		{{#each values}}
+			<tr><td class="thumb"><a href="{{link}}" style="background-image: url('{{standard}}'); background-size: cover;"></a></td><td class="likes-counter">{{likes}}</td></tr>
+		{{/each}}
+	</table>
+</template>
