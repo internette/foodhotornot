@@ -111,6 +111,7 @@ if (Meteor.isServer) {
           if(!down) return;
           foodicon.style.left = (e.clientX - startX) + origX + 'px';
           foodicon.style.top  = (e.clientY - startY) + origY + 'px';
+          console.log(foodicon.style.left);
       };
     }
   });
